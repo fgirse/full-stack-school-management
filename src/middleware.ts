@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-
 import { routeAccessMap } from "./lib/settings";
 
 const matchers = Object.keys(routeAccessMap).map((route) => ({
@@ -19,7 +18,7 @@ export default clerkMiddleware((auth, req) => {
 
   for (const { matcher, allowedRoles } of matchers) {
     if (matcher(req) && !allowedRoles.includes(role!)) {
-      return NextResponse.redirect(new URL(`/${role}`, req.url));
+      return NextResponse.redirect(new URL(`/admin`, req.url));
     }
   }
 });
