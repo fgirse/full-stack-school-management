@@ -52,8 +52,8 @@ const LoginPage = () => {
           <div className="flex flex-col items-center justify-center mb-4 w-full">
             <div className="flex items-center justify-center space-x-3 mb-1">
               <Image 
-                src="/logo.png" 
-                alt="EduSphere Logo" 
+                src="/LogoEZ990svg" 
+                alt="8zene Logo" 
                 width={48} 
                 height={48} 
               />
