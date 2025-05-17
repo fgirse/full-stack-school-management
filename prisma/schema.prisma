@@ -37,6 +37,7 @@ model Student {
 
 model Teacher {
   id        String    @id
+  password  String?
   username  String    @unique
   name      String
   surname   String

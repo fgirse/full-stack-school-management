@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.content{
+  --header-height: 60px;
+  --footer-height:120px;
+  --offset: calc(var(--footer-height) + var(--header-height));
+  min-height: calc(100vh - var(--offset));
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .react-calendar {
   width: 100% !important;
   border: none !important;
